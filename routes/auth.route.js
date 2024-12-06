@@ -15,13 +15,19 @@ router.get(
 
 router.post(
     '/login',
-    connectEnsureLogin.ensureLoggedOut({ redirectTo: '/' }),
+    (req, res, next) => {
+        console.log('Login route hit');
+        next();
+    },
     passport.authenticate('local', {
-        successReturnToOrRedirect: '/', 
-        failureRedirect: '/auth/login', 
-        failureFlash: true,
+        successRedirect: '/', // Redirect to home on successful login
+        failureRedirect: '/auth/login', // Redirect back to login on failure
+        failureFlash: true, // Enable flash messages if using flash
     })
 );
+
+module.exports = router;
+
 
 router.get(
     '/register',

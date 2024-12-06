@@ -280,7 +280,7 @@ table.logs {
   border-collapse: collapse;
   margin: 20px auto;
   font-size: 1rem;
-  background-color: #1e293b; /* Dark table background */
+  background-color: #1e293b; /* Match theme */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
