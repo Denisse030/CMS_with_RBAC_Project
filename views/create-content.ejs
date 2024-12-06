@@ -1,0 +1,12 @@
+<%- include('./layouts/header') %>
+<h2 class="title">Create Content</h2>
+<form action="/content/create" method="post" class="create-content-form">
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title" required />
+
+  <label for="body">Body</label>
+  <textarea name="body" id="body" required></textarea>
+
+  <input type="submit" value="Create Content" />
+</form>
+<%- include('./layouts/footer') %>

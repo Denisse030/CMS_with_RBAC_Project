@@ -1,0 +1,24 @@
+<%- include('./layouts/header') %>
+<h2 style="text-align: center; color: #ffffff; margin: 20px 0;">Activity Logs</h2>
+
+<table class="logs">
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>User</th>
+      <th>Metadata</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% logs.forEach(log => { %>
+    <tr>
+      <td><%= log.action %></td>
+      <td><%= log.user ? log.user.email : 'Unknown User' %></td>
+      <td class="logs-metadata"><pre><%= JSON.stringify(log.metadata, null, 2) %></pre></td>
+      <td class="logs-timestamp"><%= log.timestamp.toLocaleString() %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<%- include('./layouts/footer') %>

@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #e4e4e7; /* Light text */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  max-width: 760px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center; /* Spread items evenly */
+  align-items: center; /* Vertically center items */
+  padding: 1rem;
+  background-color: #121212; /* Optional: Background color for the nav */
+}
+
+nav ul {
+  display: flex;
+  gap: 20px; /* Add spacing between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #93c5fd; /* Light blue */
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #2563eb; /* Blue hover effect */
+  color: #ffffff; /* White text on hover */
+}
+
+
+/* Title */
+h1.title {
+  text-align: center;
+  margin: 1rem;
+  text-decoration: underline;
+  color: #93c5fd; /* Light blue */
+}
+
+h2{
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+/* App Overview Section */
+.app-overview {
+  background-color: #1e293b; /* Card background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin-top: 20px;
+}
+
+.app-overview h2 {
+  font-size: 1.8rem;
+  color: #e4e4e7; /* Light text */
+  margin: 16px 0;
+}
+
+.app-overview ul,
+.app-overview ol {
+  margin: 16px 0 16px 20px;
+  padding: 0;
+}
+
+.app-overview ul li,
+.app-overview ol li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.app-overview ul li::marker {
+  color: #93c5fd; /* Light Blue for list markers */
+}
+
+.app-overview ol li::marker {
+  color: #ffffff; /* Gold for ordered list markers */
+}
+
+.app-overview p {
+  font-size: 1.14rem;
+  margin-bottom: 20px;
+  color: #e4e4e7; /* Light text */
+  text-align: center;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Styles */
+form.lg-form {
+  margin: 16px;
+  padding: 32px;
+  border: 4px solid #374151; /* Darker border */
+  min-width: 400px;
+  border-radius: 16px;
+  background-color: #1e293b; /* Form background */
+}
+
+.lg-form label,
+.lg-form input {
+  display: block;
+  min-width: 100%;
+  margin: 8px 0px;
+}
+
+.lg-form label {
+  font-weight: bold;
+  color: #e4e4e7; /* Light text */
+}
+
+.lg-form input {
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1rem;
+  background-color: #374151; /* Input background */
+  color: #e4e4e7; /* Input text */
+}
+
+.lg-form input[type='submit'] {
+  margin: 16px 0;
+  background-color: #2563eb; /* Submit button */
+  color: #fff;
+  cursor: pointer;
+}
+
+.lg-form input[type='submit']:hover {
+  background-color: #1e40af; /* Darker blue */
+}
+
+input:focus {
+  outline: none;
+  background-color: #1e293b;
+  border: 2px solid #2563eb; /* Highlight border */
+}
+
+/* Create Content Form Styles */
+form.create-content-form {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px; /* Add spacing between elements */
+  margin: 32px auto;
+  padding: 24px;
+  width: 100%;
+  max-width: 600px; /* Limit the width */
+  border-radius: 16px;
+  background-color: #1e293b; /* Dark background to match theme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+form.create-content-form label {
+  font-size: 1.2rem;
+  color: #e4e4e7; /* Light text */
+}
+
+form.create-content-form input,
+form.create-content-form textarea {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #374151; /* Subtle border */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #121212; /* Match the theme */
+  color: #e4e4e7; /* Light text */
+}
+
+form.create-content-form textarea {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  resize: vertical; /* Allow resizing only vertically */
+  height: 100px; /* Default height for text area */
+}
+
+form.create-content-form input[type='submit'] {
+  align-self: flex-end; /* Align the button to the right */
+  padding: 10px 20px;
+  background-color: #2563eb; /* Blue background for button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form.create-content-form input[type='submit']:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+}
+
+form.create-content-form input:focus,
+form.create-content-form textarea:focus {
+  outline: none;
+  border: 2px solid #2563eb; /* Highlight input on focus */
+}
+
+/* Table Styles */
+table {
+  margin-top: 32px;
+  min-width: 600px;
+  border: none;
+  border-spacing: 0;
+  border: 4px solid #374151; /* Darker border */
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #1e293b; /* Table background */
+}
+
+thead {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+thead tr {
+  border-radius: 8px;
+  background-color: #2563eb; /* Header background */
+  overflow: hidden;
+}
+
+thead th {
+  padding: 8px 0;
+  text-align: left;
+  padding-left: 16px;
+}
+
+table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+tbody tr:hover {
+  background-color: #1e293b; /* Row hover */
+}
+
+tbody tr td {
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+/* Activity Logs Table */
+table.logs {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 1rem;
+  background-color: #1e293b; /* Dark table background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table.logs th,
+table.logs td {
+  padding: 12px 16px;
+  text-align: left;
+  color: #e4e4e7; /* Light text */
+}
+
+table.logs th {
+  background-color: #2563eb; /* Blue header background */
+  color: #ffffff; /* White header text */
+  font-weight: bold;
+}
+
+table.logs td {
+  border-bottom: 1px solid #374151; /* Subtle row separators */
+}
+
+table.logs tr:last-child td {
+  border-bottom: none; /* Remove border for the last row */
+}
+
+table.logs tr:hover {
+  background-color: #374151; /* Row hover effect */
+}
+
+.logs-metadata pre {
+  margin: 0;
+  color: #9ca3af; /* Subtle gray text for metadata */
+  font-size: 0.9rem;
+  white-space: pre-wrap; /* Allow wrapping for long metadata */
+  word-wrap: break-word;
+}
+
+.logs-timestamp {
+  font-size: 0.9rem;
+  color: #93c5fd; /* Light blue for timestamp */
+}
+
+
+/* Manage Users Form */
+.manage-user-form input[type='submit'] {
+  background: transparent;
+  color: #93c5fd; /* Light blue */
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.manage-user-form input[type='submit']:hover {
+  background-color: #1e293b;
+}
+
+.manage-user-form select {
+  border: none;
+  font-size: 1.05rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid transparent; /* No visible border */
+  background-color: transparent; /* Transparent background */
+  color: #e4e4e7; /* Text color */
+}
+
+/* Profile Section */
+.profile {
+  min-width: 600px;
+  padding: 16px;
+  border: 4px solid #374151;
+  border-radius: 16px;
+  margin-top: 32px;
+  background-color: #1e293b; /* Profile background */
+}
+
+.profile > div {
+  padding: 16px;
+}
+
+.profile .title {
+  font-weight: bold;
+  color: #93c5fd; /* Light blue */
+}
+
+/* Flash Messages */
+div.messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.messages {
+  list-style: none;
+  min-width: 600px;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+}
+
+ul.messages * {
+  padding: 8px 12px;
+}
+
+.messages .error {
+  background-color: #b91c1c; /* Error background */
+}
+
+.messages .success {
+  background-color: #15803d; /* Success background */
+}
+
+.messages .warning {
+  background-color: #ca8a04; /* Warning background */
+}
+
+.messages .info {
+  background-color: #2563eb; /* Info background */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  color: #9ca3af; /* Subtle text color */
+  font-size: 0.9rem;
+}

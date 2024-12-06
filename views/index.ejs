@@ -1,0 +1,48 @@
+<%- include('./layouts/header') %>
+
+<h1 class="title">Project Overview</h1>
+
+<div class="app-overview">
+  <p>
+    This Role-Based Access Control (RBAC) project is a secure and scalable solution for managing user authentication, authorization, and roles in a web application. This project demonstrates core concepts of modern web security and provides a practical example of access control in action.
+  </p>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li><b>User Authentication:</b> Register and log in securely using email and password.</li>
+    <li><b>Role-Based Access Control:</b> Assign roles to users, including Admin, Moderator, and Client.</li>
+    <li><b>Content Management:</b> Moderators can manage their own content while admins oversee all content.</li>
+    <li><b>Activity Logs:</b> Detailed logs track user actions for security and auditing purposes.</li>
+    <li><b>Admin Panel:</b> Manage users, view profiles, and update roles (accessible to Admins).</li>
+    <li><b>Session Persistence:</b> Sessions are securely stored using MongoDB.</li>
+    <li><b>Flash Messages:</b> Provide feedback to users, including errors and success notifications.</li>
+    <li><b>Custom Styling:</b> Modern, clean design for better user experience.</li>
+  </ul>
+
+  <h2>Technologies Used</h2>
+  <ul>
+    <li><b>Backend:</b> Node.js with Express.js framework</li>
+    <li><b>Database:</b> MongoDB with Mongoose ORM</li>
+    <li><b>Authentication:</b> Passport.js for local authentication</li>
+    <li><b>View Engine:</b> EJS for templating</li>
+    <li><b>CSS:</b> Custom styling for an attractive and responsive UI</li>
+  </ul>
+
+  <h2>How to Get Started</h2>
+  <ol>
+    <li>
+      <b>Register an Account:</b> Click on the "Register" link in the navigation bar to create an account.
+    </li>
+    <li>
+      <b>Log In:</b> Use your email and password to log in. Depending on your role, you'll gain access to different features.
+    </li>
+    <li>
+      <b>Explore:</b> If you are an Admin, visit the Admin Panel to manage users, and view detailed logs of user activities for auditing. Moderators and Clients will have access to their respective features.
+    </li>
+    <li>
+      <b>Content Management:</b> Moderators can create, and view their own content, while Admins have full oversight.
+    </li>
+  </ol>
+</div>
+
+<%- include('./layouts/footer') %>
