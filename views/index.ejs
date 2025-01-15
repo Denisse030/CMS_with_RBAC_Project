@@ -1,48 +1,63 @@
 <%- include('./layouts/header') %>
 
-<h1 class="title">Project Overview</h1>
+<h1 class="title">Overview</h1>
 
 <div class="app-overview">
   <p>
-    This Role-Based Access Control (RBAC) project is a secure and scalable solution for managing user authentication, authorization, and roles in a web application. This project demonstrates core concepts of modern web security and provides a practical example of access control in action.
+    This project is an implementation of <b>Role-Based Access Control (RBAC)</b>, integrating <b>blockchain technology</b> for secure and tamper-proof logging and <b>machine learning-based anomaly detection</b> for improved system security. It demonstrates a practical and scalable solution for managing user roles, activities, and authentication in a modern web application while addressing key cybersecurity challenges.
   </p>
 
   <h2>Key Features</h2>
   <ul>
-    <li><b>User Authentication:</b> Register and log in securely using email and password.</li>
-    <li><b>Role-Based Access Control:</b> Assign roles to users, including Admin, Moderator, and Client.</li>
-    <li><b>Content Management:</b> Moderators can manage their own content while admins oversee all content.</li>
-    <li><b>Activity Logs:</b> Detailed logs track user actions for security and auditing purposes.</li>
-    <li><b>Admin Panel:</b> Manage users, view profiles, and update roles (accessible to Admins).</li>
-    <li><b>Session Persistence:</b> Sessions are securely stored using MongoDB.</li>
-    <li><b>Flash Messages:</b> Provide feedback to users, including errors and success notifications.</li>
-    <li><b>Custom Styling:</b> Modern, clean design for better user experience.</li>
+    <li><b>Role-Based Access Control (RBAC):</b> Secure and scalable management of user roles: Admin, Moderator, Client. Middleware enforces role-based restrictions on application routes.</li>
+    <li><b>Blockchain Integration:</b>
+      <ul>
+        <li><b>Immutable Logging:</b> All critical user actions (e.g., logins, role changes) are securely logged to the blockchain using a Solidity smart contract.</li>
+        <li><b>Transparency & Tamper-Proof Auditing:</b> Logs are retrievable and auditable through smart contract methods.</li>
+      </ul>
+    </li>
+    <li><b>Machine Learning for Anomaly Detection:</b>
+      <ul>
+        <li><b>Threshold-Based Detection:</b> Monitors login behavior (e.g., failed login attempts) to identify suspicious activity.</li>
+        <li><b>Dynamic Alerts:</b> Flags anomalous behavior based on statistical thresholds, ensuring real-time protection against security breaches.</li>
+      </ul>
+    </li>
+    <li><b>Administrative Control:</b> Comprehensive Admin Panel for managing users, roles, and logs, with detailed activity logs stored on the blockchain.</li>
+    <li><b>Secure Authentication:</b> Passwords securely hashed using bcrypt, with session management using MongoDB for persistent authentication.</li>
   </ul>
 
   <h2>Technologies Used</h2>
   <ul>
-    <li><b>Backend:</b> Node.js with Express.js framework</li>
-    <li><b>Database:</b> MongoDB with Mongoose ORM</li>
-    <li><b>Authentication:</b> Passport.js for local authentication</li>
-    <li><b>View Engine:</b> EJS for templating</li>
-    <li><b>CSS:</b> Custom styling for an attractive and responsive UI</li>
+    <li><b>Backend:</b> Node.js with Express.js.</li>
+    <li><b>Database:</b> MongoDB for user data and session storage.</li>
+    <li><b>Blockchain:</b> Local Ethereum blockchain (Ganache) with smart contracts written in Solidity.</li>
+    <li><b>Authentication:</b> Passport.js for secure user login.</li>
+    <li><b>Machine Learning:</b> Statistical models for anomaly detection using the <code>simple-statistics</code> library.</li>
+    <li><b>Frontend:</b> EJS templates with modern CSS for responsive and user-friendly UI.</li>
   </ul>
 
-  <h2>How to Get Started</h2>
+  <h2>Core Objectives</h2>
+  <ul>
+    <li><b>Secure User Access:</b> Ensure users can only access features based on their assigned roles, preventing unauthorized actions through strict role enforcement.</li>
+    <li><b>Auditable Logs:</b> Enable tamper-proof, immutable logs for key actions, retrievable via blockchain.</li>
+    <li><b>Anomaly Detection:</b> Identify and alert suspicious login attempts to mitigate potential security risks.</li>
+    <li><b>Scalability:</b> Design the system to handle large datasets and user bases without performance degradation.</li>
+  </ul>
+
+  <h2>How It Works</h2>
   <ol>
-    <li>
-      <b>Register an Account:</b> Click on the "Register" link in the navigation bar to create an account.
-    </li>
-    <li>
-      <b>Log In:</b> Use your email and password to log in. Depending on your role, you'll gain access to different features.
-    </li>
-    <li>
-      <b>Explore:</b> If you are an Admin, visit the Admin Panel to manage users, and view detailed logs of user activities for auditing. Moderators and Clients will have access to their respective features.
-    </li>
-    <li>
-      <b>Content Management:</b> Moderators can create, and view their own content, while Admins have full oversight.
-    </li>
+    <li><b>Authentication:</b> Users register with email and password. Based on the role, users gain access to specific features (e.g., Admins can update roles, Moderators can manage content).</li>
+    <li><b>Blockchain Logging:</b> All user actions are logged on the blockchain for security and transparency. Logs are stored as structured events (e.g., action, user address, role, timestamp).</li>
+    <li><b>Anomaly Detection:</b> Login attempts are monitored. Thresholds based on historical login data help identify unusual behaviors (e.g., repeated failed attempts, login at odd hours).</li>
+    <li><b>Admin Capabilities:</b> Admins can view user profiles, update roles, and analyze blockchain-stored logs.</li>
   </ol>
+
+  <h2>Advantages</h2>
+  <ul>
+    <li><b>Enhanced Security:</b> Combines RBAC, blockchain, and machine learning for multi-layered protection.</li>
+    <li><b>Transparency:</b> Immutable logs ensure accountability.</li>
+    <li><b>Scalability:</b> Suitable for systems with high user activity.</li>
+  </ul>
 </div>
 
 <%- include('./layouts/footer') %>

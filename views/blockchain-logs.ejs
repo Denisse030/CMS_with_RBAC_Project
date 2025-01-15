@@ -27,7 +27,6 @@
 </div>
 
 <script>
-    // Sort table by column
     function sortTable(columnIndex) {
         const table = document.getElementById("logsTable");
         const rows = Array.from(table.rows).slice(1);
@@ -46,7 +45,6 @@
         table.setAttribute("data-sort-asc", !isAscending);
     }
 
-    // Filter logs based on search input
     function filterLogs() {
         const input = document.getElementById("searchBar").value.toLowerCase();
         const rows = document.querySelectorAll("#logsTable tbody tr");

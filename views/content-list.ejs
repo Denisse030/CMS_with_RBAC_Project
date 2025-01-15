@@ -2,27 +2,27 @@
 <h2>Content List</h2>
 
 <% if (content.length === 0) { %>
-  <p style="text-align: center; color: #93c5fd;">No content available</p>
+    <p style="text-align: center; color: #93c5fd;">No content available</p>
 <% } else { %>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-        <th>Created By</th>
-        <th>Created At</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% content.forEach(item => { %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= item.body %></td>
-        <td><%= item.createdBy.email %></td>
-        <td><%= item.createdAt.toDateString() %></td>
-      </tr>
-      <% }) %>
-    </tbody>
-  </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Created By</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% content.forEach(item => { %>
+            <tr>
+                <td><%= item.title %></td>
+                <td><%= item.body %></td>
+                <td><%= item.createdBy ? item.createdBy.email : 'Unknown User' %></td>
+                <td><%= item.createdAt ? item.createdAt.toDateString() : 'Unknown Date' %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
 <% } %>
 <%- include('./layouts/footer') %>

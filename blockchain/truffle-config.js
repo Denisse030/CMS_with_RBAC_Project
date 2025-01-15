@@ -144,14 +144,14 @@ module.exports = {
 module.exports = {
   networks: {
     development: {
-      host: "127.0.0.1", // Localhost (default for Ganache)
-      port: 7545,        // Port Ganache is running on
-      network_id: "*",   // Match any network id
+      host: "127.0.0.1", 
+      port: 7545,    
+      network_id: "*",   
     },
   },
   compilers: {
     solc: {
-      version: "0.8.0",  // Use a compatible Solidity version
+      version: "0.8.0",  
     },
   },
 };
@@ -160,16 +160,16 @@ module.exports = {
   networks: {
     goerli: {
       provider: () => new HDWalletProvider(process.env.PRIVATE_KEY, "https://goerli.infura.io/v3/" + process.env.INFURA_PROJECT_ID),
-      network_id: 5, // Goerli's network ID
-      gas: 5500000, // Gas limit
-      confirmations: 2, // Number of confirmations to wait between deployments
-      timeoutBlocks: 200, // Number of blocks before a deployment times out
-      skipDryRun: true, // Skip dry run before migrations
+      network_id: 5, 
+      gas: 5500000,
+      confirmations: 2, 
+      timeoutBlocks: 200, 
+      skipDryRun: true, 
     },
   },
   compilers: {
     solc: {
-      version: "0.8.0", // Solidity version
+      version: "0.8.0", 
     },
   },
 };

@@ -20,9 +20,9 @@ router.post(
         next();
     },
     passport.authenticate('local', {
-        successRedirect: '/', // Redirect to home on successful login
-        failureRedirect: '/auth/login', // Redirect back to login on failure
-        failureFlash: true, // Enable flash messages if using flash
+        successRedirect: '/',
+        failureRedirect: '/auth/login',
+        failureFlash: true, 
     })
 );
 

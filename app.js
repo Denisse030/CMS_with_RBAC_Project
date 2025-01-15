@@ -12,15 +12,25 @@ const { roles } = require('./utils/constants');
 const User = require('./models/user.model');
 const contentRoute = require('./routes/content.route');
 const path = require('path');
-const { contract } = require('./blockchain/web3'); // Import contract
+const { contract } = require('./blockchain/web3'); 
+const thresholds = require('./utils/thresholds');
+
+console.log('Thresholds loaded in app.js:', thresholds);
+const trainingData = [
+    [0, 9],  
+    [0, 18], 
+    [3, 23], 
+    [10, 3], 
+    [1, 14],
+]
+
+console.log('Anomaly Detection Thresholds:', thresholds);
 
 const app = express();
 
-// Test blockchain connection
 console.log("Testing blockchain connection...");
 console.log("Contract Address:", contract.options.address);
 
-// Middleware and route setup
 app.use(morgan('dev'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -98,7 +108,6 @@ mongoose
   })
   .catch((err) => console.log(err.message));
 
-// Middleware to ensure admin access
 function ensureAdmin(req, res, next) {
   if (req.user.role === roles.admin) {
     next();
@@ -112,3 +121,5 @@ if (process.env.NODE_ENV === 'production') {
   app.set('trust proxy', 1);
   session.cookie.secure = true;
 }
+
+module.exports = { thresholds };

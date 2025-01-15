@@ -10,3 +10,4 @@ const LogSchema = new mongoose.Schema({
 const Log = mongoose.model('log', LogSchema);
 
 module.exports = Log;
+

@@ -1,14 +1,27 @@
 <%- include('./layouts/header') %>
 
 <h1>Login</h1>
+
+<% if (messages.warning) { %>
+  <div class="alert alert-warning">
+    <%= messages.warning[0] %>
+  </div>
+<% } %>
+
+<% if (messages.error) { %>
+  <div class="alert alert-error">
+    <%= messages.error[0] %>
+  </div>
+<% } %>
+
 <form action="/auth/login" method="post" class="lg-form">
   <div>
     <label for="email">Email/Username</label>
-    <input type="email" name="email" id="email" />
+    <input type="email" name="email" id="email" required />
   </div>
   <div>
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
+    <input type="password" name="password" id="password" required />
   </div>
   <div>
     <input type="submit" value="Login" />
