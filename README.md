@@ -7,7 +7,7 @@ A robust and scalable web application designed to manage user authentication, au
 ---
 ## Demo Video
 
-[![Watch the video](https://youtu.be/svGL3UsED9Y)
+[![Watch the video](https://img.youtube.com/vi/your_video_id/maxresdefault.jpg)](https://youtu.be/svGL3UsED9Y)
 
 Click the thumbnail above to watch a walkthrough of the project's features and functionality!
 
