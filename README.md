@@ -5,6 +5,14 @@ A robust and scalable web application designed to manage user authentication, au
 > **Note**: This project was developed as part of my **Capstone Experience in Digital Forensics/Cybersecurity II + Network Security and Forensics** courses at John Jay College of Criminal Justice. It demonstrates the integration of advanced technologies to solve real-world cybersecurity challenges.
 
 ---
+## Demo Video
+
+[![Watch the video](https://youtu.be/svGL3UsED9Y)
+
+Click the thumbnail above to watch a walkthrough of the project's features and functionality!
+
+---
+
 
 ## **Features**
 - **Role-Based Access Control (RBAC)**: Secure role management for Admins, Moderators, and Clients, enabling fine-grained permissions.
