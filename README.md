@@ -2,8 +2,6 @@
 
 A robust and scalable web application designed to manage user authentication, authorization, and content securely. This project integrates modern technologies like **blockchain** for immutable logging and **machine learning** for anomaly detection in login behavior.
 
-> **Note**: This project was developed as part of my **Capstone Experience in Digital Forensics/Cybersecurity II + Network Security and Forensics** courses at John Jay College of Criminal Justice. It demonstrates the integration of advanced technologies to solve real-world cybersecurity challenges.
-
 ---
 ## Demo Video
 
